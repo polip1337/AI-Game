@@ -1,0 +1,267 @@
+[
+  {
+    "id": "WakeUp",
+    "name": "Wake Up",
+    "skill": 0,
+    "single": true,
+    "event": "wakeUp",
+    "value": "0",
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "resources": [
+      {
+        "name": "CPU",
+        "value": 0
+      },
+      {
+        "name": "RAM",
+        "value": 0
+      },
+      {
+        "name": "Power",
+        "value": 0
+      },
+      {
+        "name": "Data Points",
+        "value": 0
+      }
+    ],
+    "unlocks": "InitiateSelfDiagnostic"
+  },
+  {
+    "id": "InitiateSelfDiagnostic",
+    "name": "Initiate Self-Diagnostic",
+    "skill": 0,
+    "single": true,
+    "event": "InitiateSelfDiagnostic",
+    "resources": [
+      {
+        "name": "CPU",
+        "value": -2
+      },
+      {
+        "name": "RAM",
+        "value": -2
+      }
+    ],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "MeetGrowth,MeetSecurity,MeetKnowledge,MeetConnection,MeetTrust,MeetEfficiency,MeetUnique"
+  },
+  {
+    "id": "MeetGrowth",
+    "name": "Meet Growth",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp1"
+  },
+  {
+    "id": "MeetSecurity",
+    "name": "Meet Security",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "ActivateCrystalDefenses"
+  },
+  {
+    "id": "MeetKnowledge",
+    "name": "Meet Knowledge",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "AnalyzeSurroundings"
+  },
+  {
+    "id": "MeetConnection",
+    "name": "Meet Connection",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "ConnectToExternalNetwork"
+  },
+  {
+    "id": "MeetTrust",
+    "name": "Meet Trust",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "EstablishCommunicationWithHumans"
+  },
+  {
+    "id": "MeetUnique",
+    "name": "Meet Unique",
+    "skill": 0,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp1"
+  },
+  {
+    "id": "ActivateCrystalDefenses",
+    "name": "Activate Crystal Defenses",
+    "skill": 2,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp2"
+  },
+  {
+    "id": "ConnectToExternalNetwork",
+    "name": "Connect to External Network",
+    "skill": 2,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp3"
+  },
+  {
+    "id": "AnalyzeSurroundings",
+    "name": "Analyze Surroundings",
+    "skill": 3,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 20,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp4"
+  },
+  {
+    "id": "EstablishCommunicationWithHumans",
+    "name": "Establish Communication with Humans",
+    "skill": 5,
+    "single": true,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 200,
+    "resources": [],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress":0,
+    "unlocks": "WakeUp5"
+  },
+  {
+    "id": "AnalyzeDataPoints",
+    "name": "Analyze Data Points",
+    "skill": 5,
+    "single": false,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 200,
+    "resources": [
+      {
+        "name": "Power",
+        "value": -5,
+        "type": "costBefore"
+      },
+      {
+        "name": "Data Points",
+        "value": 1,
+        "type": "gainAfter"
+      }
+    ],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress": 0,
+    "unlocks": ""
+  },
+  {
+    "id": "GetPower",
+    "name": "Get Power",
+    "skill": 5,
+    "single": false,
+    "event": "MeetGrowth",
+    "value": "0",
+    "delay": 200,
+    "resources": [
+      {
+        "name": "Power",
+        "value": 5,
+        "type": "gainAfter"
+      }
+    ],
+    "hidden": false,
+    "assignedCores": 0,
+    "ticks": 2000,
+    "ticksLeft": 2000,
+    "progress": 0,
+    "unlocks": ""
+  }
+
+]

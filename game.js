@@ -36,9 +36,8 @@ function updateProgressBar() {
                     unlockElements(taskMap[key].unlocks);
                     unAssignAllCores(key);
                     hideElement(taskElement, true);
-                    showPopup("Event", taskMap[key].eventText, taskMap[key].eventText2, taskMap[key].eventText3);
-                    destroyElement(taskMap[key].id);
-                    delete taskMap[key];
+                    triggerEvent(taskMap[key].event);
+
                 } else {
                     taskMap[key].ticksLeft = taskMap[key].ticks;
                     if (!areResourcesAvailable(taskMap[key])) {
@@ -139,7 +138,15 @@ function unAssignCore(id, coreChange) {
 
     updateCores();
 }
+function triggerEvent (id){
+var event = eventMap[id];
+showPopup(event.title, event.eventText1, event.eventText2, event.eventText3);
+}
 
+function removeTask(key){
+    destroyElement(taskMap[key].id);
+    delete taskMap[key];
+}
 function unAssignAllCores(id) {
     var element = document.getElementById(id + "Cores");
     var currentCores = Number(element.innerHTML);

@@ -29,11 +29,8 @@ var loadEvents = new XMLHttpRequest();
 loadEvents.onreadystatechange = function() {
 	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
 		var data = JSON.parse(xhr.responseText);
-		var container = document.getElementById("container");
-		data.forEach(function(item) {
-			createAndAdd(item);
-		});
-		taskMap = mapTasksById(data);
+
+		eventMap = mapTasksById(data);
         gameLoaded = true;
 
 	}

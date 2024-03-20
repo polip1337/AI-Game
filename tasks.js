@@ -29,12 +29,18 @@ var loadEvents = new XMLHttpRequest();
 loadEvents.onreadystatechange = function() {
 	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
 		var data = JSON.parse(xhr.responseText);
-		eventMap = eventMap(data);
+		var container = document.getElementById("container");
+		data.forEach(function(item) {
+			createAndAdd(item);
+		});
+		taskMap = mapTasksById(data);
+        gameLoaded = true;
+
 	}
 };
 loadEvents.open("GET", "events.json", true);
 loadEvents.send();
-function eventMap(tasks) {
+function mapTasksById(tasks) {
   return tasks.reduce((map, task) => {
     map[task.id] = task;
     return map;

@@ -31,7 +31,8 @@ xhr.onreadystatechange = function() {
 		gameLoaded = true;
 	}
 };
-
+xhr.open("GET", "data.json", true);
+xhr.send();
 function mapTasksById(tasks) {
   return tasks.reduce((map, task) => {
     map[task.id] = task;

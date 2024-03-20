@@ -25,8 +25,16 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "data.json", true);
 xhr.send();
 
-
-function mapTasksById(tasks) {
+var loadEvents = new XMLHttpRequest();
+loadEvents.onreadystatechange = function() {
+	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
+		var data = JSON.parse(xhr.responseText);
+		eventMap = eventMap(data);
+	}
+};
+loadEvents.open("GET", "events.json", true);
+loadEvents.send();
+function eventMap(tasks) {
   return tasks.reduce((map, task) => {
     map[task.id] = task;
     return map;

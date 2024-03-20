@@ -4,7 +4,7 @@
     "name": "Wake Up",
     "skill": 0,
     "single": true,
-    "event": "wakeUp",
+    "event": "wakeUp2",
     "value": "0",
     "hidden": false,
     "assignedCores": 0,

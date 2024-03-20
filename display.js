@@ -20,12 +20,10 @@ function updateCores() {
 
 
 // Function to display the pop-up with the given title and description
-function showPopup(title, text, text2, text3) {
+function showPopup(title, text) {
   document.getElementById("popup").style.display = "flex";
 	document.getElementById("popup-title").innerHTML= title;
 	document.getElementById("popup-message").innerHTML = text;
-	document.getElementById("popup-message2").innerHTML = text2;
-	document.getElementById("popup-message3").innerHTML = text3;
 
 }
 

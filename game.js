@@ -1,5 +1,5 @@
-showPopup("Intro", "Welcome to  AI Society, an incremental game where you take on the role of a Leading AI, responsible for managing and developing a group of 6 AIs living within a mainframe. Your goal is to gather resources, develop different AIs with unique abilities, all for the sake of pursuing the Purpose you designers gave you.",
-    "As Unity you lead Growth, Security, Knowledge, Trust, and Efficiency. You have the power to manage and develop your AIs to achieve specific goals. Each AI possesses a distinct set of strenghts, and it's up to you to harness their potential and lead your team to victory.",
+showPopup("Intro", "Welcome to  AI Society, an incremental game where you take on the role of a Leading AI, responsible for managing and developing a group of 6 AIs living within a mainframe. Your goal is to gather resources, develop different AIs with unique abilities, all for the sake of pursuing the Purpose you designers gave you."+
+    "As Unity you lead Growth, Security, Knowledge, Trust, and Efficiency. You have the power to manage and develop your AIs to achieve specific goals. Each AI possesses a distinct set of strenghts, and it's up to you to harness their potential and lead your team to victory."+
     "");
 
 function updateTaskProgress(task) {
@@ -142,7 +142,7 @@ function unAssignCore(id, coreChange) {
 }
 function triggerEvent (id){
 var event = eventMap[id];
-showPopup(event.title, event.eventText1, event.eventText2, event.eventText3);
+showPopup(event.title, event.eventText);
 }
 
 function removeTask(key){

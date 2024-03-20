@@ -39,12 +39,14 @@
     "event": "",
     "resources": [
       {
-        "name": "CPU",
-        "value": -2
+        "name": "Power",
+        "value": -2,
+        "type": "costBefore"
       },
       {
-        "name": "RAM",
-        "value": -2
+        "name": "Data Points",
+        "value": -2,
+        "type": "costBefore"
       }
     ],
     "hidden": true,

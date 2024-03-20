@@ -5,8 +5,8 @@ function createElement(tag, props) {
 	}
 	return element;
 }
-var taskMap;
-var eventMap;
+var taskMap= new Map();
+var eventMap= new Map();
 var gameLoaded = false;
 // Load the JSON file and create HTML elements
 var xhr = new XMLHttpRequest();

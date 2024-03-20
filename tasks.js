@@ -21,16 +21,17 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "data.json", true);
 xhr.send();
 var eventMap;
+var gameLoaded = false;
 // Load the JSON file and create HTML elements
 xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
 		var data = JSON.parse(xhr.responseText);
 		taskMap = mapTasksById(data);
+		gameLoaded = true;
 	}
 };
-xhr.open("GET", "data.json", true);
-xhr.send();
+
 function mapTasksById(tasks) {
   return tasks.reduce((map, task) => {
     map[task.id] = task;

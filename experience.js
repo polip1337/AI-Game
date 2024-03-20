@@ -24,7 +24,7 @@ function levelUpSkill(skillIndex){
     skill.level++;
     skill.experience = 0;
     skill.experienceToLevel = Math.round(skill.experienceToLevel * 1.05);
-    document.getElementById('SkillText'+skill.name).text = skill.name +" " +skill.level;
+    document.getElementById('SkillText'+skill.name).innerHTML = skill.name + " " + skill.level;
 }
 function updateExpBars() {
   document.getElementById('progressUnity').style.width = skills[0].progress+ "%";

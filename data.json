@@ -29,7 +29,7 @@
         "value": 0
       }
     ],
-    "unlocks": "InitiateSelfDiagnostic"
+    "unlocks": "InitiateSelfDiagnostic,GetPower,AnalyzeDataPoints"
   },
   {
     "id": "InitiateSelfDiagnostic",

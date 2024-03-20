@@ -18,6 +18,7 @@ function updateCores() {
 
 }
 
+
 // Function to display the pop-up with the given title and description
 function showPopup(title, text, text2, text3) {
   document.getElementById("popup").style.display = "flex";

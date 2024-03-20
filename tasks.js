@@ -27,8 +27,8 @@ xhr.send();
 
 var loadEvents = new XMLHttpRequest();
 loadEvents.onreadystatechange = function() {
-	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
-		var data = JSON.parse(xhr.responseText);
+	if (loadEvents.readyState === 4 && (loadEvents.status === 200 || loadEvents.status === 0)) {
+		var data = JSON.parse(loadEvents.responseText);
 
 		eventMap = mapTasksById(data);
 

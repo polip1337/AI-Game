@@ -14,10 +14,17 @@ function checkLevelUp(skillIndex) {
   skills[skillIndex].progress = Math.round((skill.experience/skill.experienceToLevel)*100);
 
   if (skill.experience >= skill.experienceToLevel) {
-    skill.level++;
-	skill.experience = 0;
-	skill.experienceToLevel = Math.round(skill.experienceToLevel * 1.05);
+    levelUpSkill(skillIndex);
   }
+}
+
+function levelUpSkill(skillIndex){
+    const skill = skills[skillIndex];
+
+    skill.level++;
+    skill.experience = 0;
+    skill.experienceToLevel = Math.round(skill.experienceToLevel * 1.05);
+    document.getElementById('SkillText'+skill.name).text = skill.name +" " +skill.level;
 }
 function updateExpBars() {
   document.getElementById('progressUnity').style.width = skills[0].progress+ "%";

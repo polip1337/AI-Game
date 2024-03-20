@@ -31,12 +31,12 @@ loadEvents.onreadystatechange = function() {
 		var data = JSON.parse(xhr.responseText);
 
 		eventMap = mapTasksById(data);
-        gameLoaded = true;
 
 	}
 };
 loadEvents.open("GET", "events.json", true);
 loadEvents.send();
+
 function mapTasksById(tasks) {
   return tasks.reduce((map, task) => {
     map[task.id] = task;

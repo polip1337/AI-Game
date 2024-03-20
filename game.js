@@ -38,7 +38,7 @@ function updateProgressBar() {
                     hideElement(taskElement, true);
                     showPopup("Event", taskMap[key].eventText, taskMap[key].eventText2, taskMap[key].eventText3);
                     destroyElement(taskMap[key].id);
-                    taskMap.delete(key);
+                    delete taskMap[key];
                 } else {
                     taskMap[key].ticksLeft = taskMap[key].ticks;
                     if (!areResourcesAvailable(taskMap[key])) {

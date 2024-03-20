@@ -75,7 +75,7 @@
     "name": "Meet Security",
     "skill": 0,
     "single": true,
-    "event": "",
+    "event": "MeetSecurity",
     "value": "0",
     "delay": 20,
     "resources": [],

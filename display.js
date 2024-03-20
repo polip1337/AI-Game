@@ -32,3 +32,6 @@ function showPopup(title, text, text2, text3) {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+function destroyElement(name ) {
+  document.getElementById(name).remove();
+}

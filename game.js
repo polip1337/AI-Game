@@ -37,7 +37,7 @@ function updateProgressBar() {
                     unAssignAllCores(key);
                     hideElement(taskElement, true);
                     triggerEvent(taskMap[key].event);
-
+                    removeTask(key);
                 } else {
                     taskMap[key].ticksLeft = taskMap[key].ticks;
                     if (!areResourcesAvailable(taskMap[key])) {

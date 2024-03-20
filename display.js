@@ -17,8 +17,6 @@ function updateCores() {
   document.getElementById("cores").innerHTML = `${numFreeCores}/${cores.numCores}`;
 
 }
-const popup = document.getElementById("popup");
-const closeButton = document.getElementById("close-popup");
 
 // Function to display the pop-up with the given title and description
 function showPopup(title, text, text2, text3) {

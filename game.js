@@ -50,9 +50,11 @@ function updateProgressBar() {
 }
 
 setInterval(() => {
+if(gameLoaded){
     manageLocks()
     updateAllTaskProgress();
     updateProgressBar();
+    }
 
 }, 1);
 

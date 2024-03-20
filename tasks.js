@@ -51,7 +51,7 @@ const iconElement = document.createElement("div");
 iconElement.classList.add("task-icon");
 
 const iconImgElement = document.createElement("img");
-iconImgElement.setAttribute("src", "icons/" + data.skill + ".png");
+iconImgElement.setAttribute("src", "icons/" + data.skill + ".PNG");
 iconImgElement.setAttribute("alt", "Task Icon");
 
 iconElement.appendChild(iconImgElement);

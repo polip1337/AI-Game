@@ -93,7 +93,7 @@
     "name": "Meet Knowledge",
     "skill": 0,
     "single": true,
-    "event": "",
+    "event": "MeetKnowledge",
     "value": "0",
     "delay": 20,
     "resources": [],

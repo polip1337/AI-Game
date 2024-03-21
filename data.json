@@ -219,7 +219,7 @@
   {
     "id": "AnalyzeDataPoints",
     "name": "Analyze Data Points",
-    "skill": 5,
+    "skill": 1,
     "single": false,
     "event": "",
     "value": "0",
@@ -246,7 +246,7 @@
   {
     "id": "GetPower",
     "name": "Get Power",
-    "skill": 5,
+    "skill": 1,
     "single": false,
     "event": "",
     "value": "0",

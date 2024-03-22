@@ -106,5 +106,6 @@ function unlockElements(ids) {
     if (element) {
 		hideElement (element,false);
     }
+    taskMap[id].hidden=false;
   });
 }

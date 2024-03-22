@@ -251,7 +251,7 @@ font-family: Arial, sans-serif;
 background-color: black;
 color: white;
 height: 40px;
-width: calc(33% - 1px);
+width: 33.3333%
 display: flex;
 flex-direction: column;
 align-items: center;

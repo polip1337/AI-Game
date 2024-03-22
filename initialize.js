@@ -11,6 +11,7 @@ $( document ).ready(function() {
     }else{
         loadFromFile();
     }
+    updateExpBars()
     gameLoaded = true;
 
 });

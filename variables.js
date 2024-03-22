@@ -1,4 +1,4 @@
-const cores = {
+cores = {
   numCores: 3,
   numFreeCores: 3,
   gatherCores: 0,
@@ -6,7 +6,7 @@ const cores = {
   upgradeCores: 0,
 };
 
-const resourcesMain = [
+resourcesMain = [
   { name: 'CPU', value: 0 },
   { name: 'RAM', value: 0 },
   { name: 'Money', value: 0 },
@@ -16,7 +16,7 @@ const resourcesMain = [
   { name: 'Botnet', value: 0 }
 ];
 
-const skills = [
+skills = [
   { name: 'Unity', experience: 0, level: 1, experienceToLevel: 1000, progress:0},
   { name: 'Growth', experience: 0, level: 1, experienceToLevel: 1000, progress:0 },
   { name: 'Security', experience: 0, level: 1, experienceToLevel: 1000, progress:0 },

@@ -14,12 +14,12 @@ xhr.onreadystatechange = function() {
 	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
 		var data = JSON.parse(xhr.responseText);
 		var container = document.getElementById("container");
-		data.forEach(function(item) {
-			createAndAdd(item);
-		});
-		taskMap = mapTasksById(data);
-        gameLoaded = true;
 
+		taskMap = mapTasksById(data);
+        for (const key in taskMap) {
+            createAndAdd(taskMap[key]);
+        }
+        gameLoaded = true;
 	}
 };
 xhr.open("GET", "data.json", true);

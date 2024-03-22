@@ -1,5 +1,6 @@
-    var gameLoaded = false;
-
+var gameLoaded = false;
+var taskMap= new Map();
+var eventMap= new Map();
 $( document ).ready(function() {
     if(localStorage.getItem('eventMap')!= null && localStorage.getItem('taskMap')!= null){
         load();
@@ -16,8 +17,7 @@ $( document ).ready(function() {
 
 
 function loadFromFile(){
-    var taskMap= new Map();
-    var eventMap= new Map();
+
     // Load the JSON file and create HTML elements
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {

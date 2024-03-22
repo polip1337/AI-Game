@@ -239,8 +239,6 @@ font-family: Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-
-  margin-bottom: 2px;
 }
 #container {
   display: flex;
@@ -381,11 +379,6 @@ word-wrap: break-word;
   margin-left: 20px; /* adjust to add some space between the toolbar and the main content */
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px 0;
-}
 .container {
   display: flex;
   justify-content: space-between;

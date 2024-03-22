@@ -2,6 +2,9 @@ $( document ).ready(function() {
     console.log( "ready!" );
     if(localStorage.getItem('cores')!= null){
     load()
+    manageLocks()
+    updateAllTaskProgress();
+    updateProgressBar();
     }
 });
 function save(){

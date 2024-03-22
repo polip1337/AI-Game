@@ -1,12 +1,4 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
-    if(localStorage.getItem('cores')!= null){
-    load()
-    manageLocks()
-    updateAllTaskProgress();
-    updateProgressBar();
-    }
-});
+
 function save(){
   localStorage.setItem('cores', JSON.stringify(cores));
   localStorage.setItem('resourcesMain', JSON.stringify(resourcesMain));

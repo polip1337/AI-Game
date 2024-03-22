@@ -1,140 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Incremental Game
     </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  </head>
-  <body>
+</head>
+<body>
 <div class="popup-container" id="popup">
-  <div class="popup">
-    <h2 class="popup-title" id="popup-title">Something went Wrong!</h2>
-    <p class="popup-message" id="popup-message">Event data is missing</p>
-    <button class="popup-button" onclick="closePopup()">OK</button>
-  </div>
+    <div class="popup">
+        <h2 class="popup-title" id="popup-title">Something went Wrong!</h2>
+        <p class="popup-message" id="popup-message">Event data is missing</p>
+        <button class="popup-button" onclick="closePopup()">OK</button>
+    </div>
 </div>
 
-    <div class="row">
-      <div class="skill" >
+<div class="row">
+    <div class="skill">
         <div class="row">
-          <img src="icons/0.PNG" class="skill-icon">
-          <div class="skill-text" id="SkillTextUnity">Unity 1
-          </div>
+            <img src="icons/0.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextUnity">Unity 1
+            </div>
         </div>
-      
-      <div class="progress-bar">
-        <div class="progress" id="progressUnity">
+
+        <div class="progress-bar">
+            <div class="progress" id="progressUnity">
+            </div>
+
         </div>
-      
-		</div>
-		</div>
-    <div class="skill">
-      <div class="row">
-        <img src="icons/1.PNG" class="skill-icon">
-        <div class="skill-text" id="SkillTextGrowth">Growth 1
-        </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" id="progressGrowth">
-        </div>
-      </div>
     </div>
     <div class="skill">
-      <div class="row">
-        <img src="icons/2.PNG" class="skill-icon">
-        <div class="skill-text" id="SkillTextSecurity" >Security 1
+        <div class="row">
+            <img src="icons/1.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextGrowth">Growth 1
+            </div>
         </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" id="progressSecurity">
+        <div class="progress-bar">
+            <div class="progress" id="progressGrowth">
+            </div>
         </div>
-      </div>
-    </div>
-    
-    </div>
-  <div class="row">
-	<div class="skill">
-      <div class="row">
-        <img src="icons/3.PNG" class="skill-icon">
-        <div class="skill-text" id="SkillTextKnowledge">Knowledge 1
-        </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" id="progressKnowledge">
-        </div>
-      </div>
-    </div>
-    
-    <div class="skill">
-      <div class="row">
-        <img src="icons/5.PNG" class="skill-icon">
-        <div class="skill-text" id="SkillTextTrust">Trust 1
-        </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" id="progressTrust">
-        </div>
-      </div>
     </div>
     <div class="skill">
-      <div class="row">
-        <img src="icons/6.PNG" class="skill-icon">
-        <div class="skill-text" id="SkillTextEfficiency">Efficiency 1
+        <div class="row">
+            <img src="icons/2.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextSecurity">Security 1
+            </div>
         </div>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" id="progressEfficiency">
+        <div class="progress-bar">
+            <div class="progress" id="progressSecurity">
+            </div>
         </div>
-      </div>
     </div>
-   
-  </div>
+
+</div>
+<div class="row">
+    <div class="skill">
+        <div class="row">
+            <img src="icons/3.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextKnowledge">Knowledge 1
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progressKnowledge">
+            </div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="row">
+            <img src="icons/5.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextTrust">Trust 1
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progressTrust">
+            </div>
+        </div>
+    </div>
+    <div class="skill">
+        <div class="row">
+            <img src="icons/6.PNG" class="skill-icon">
+            <div class="skill-text" id="SkillTextEfficiency">Efficiency 1
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progressEfficiency">
+            </div>
+        </div>
+    </div>
+
+</div>
 <div class="container">
-  <div class="toolbar-left ai-theme" id="toolbar-left">
-  <div class="resource">
-    Cores:
-    <div class="resource-value">
-      <span id="cores">3/3</span>
-    </div>
-  </div>
+    <div class="toolbar-left ai-theme" id="toolbar-left">
+        <div class="resource">
+            Cores:
+            <div class="resource-value">
+                <span id="cores">3/3</span>
+            </div>
+        </div>
 
-  
+
+    </div>
+    <div class="main-content">
+        <div class="row">
+            <!-- Skills and progress bars here -->
+        </div>
+        <div class="row">
+            <div class="game-board" id="container">
+            </div>
+
+        </div>
+    </div>
+    <div class="toolbar-right ai-theme" id="right-toolbar">
+
+    </div>
+    <div class="task-bar">
+        <div><img src="icons/6.PNG" class="skill-icon" alt="Icon 1" onclick="save()"></div>
+        <button class="popup-button" onclick="save()">OK</button>
+
+        <div><img src="icons/6.PNG" class="skill-icon" alt="Icon 2"></div>
+        <div><img src="icons/6.PNG" class="skill-icon" alt="Icon 3"></div>
+        <!-- Add more task icons as needed -->
+    </div>
 </div>
-  <div class="main-content">
-    <div class="row">
-      <!-- Skills and progress bars here -->
-    </div>
-    <div class="row">
-      <div class="game-board" id="container">
-      </div>
-      
-    </div>
-  </div>
-  <div class="toolbar-right ai-theme" id="right-toolbar">
-	  
-  </div>
-  <div class="task-bar">
-    <div ><img src="icons/6.PNG" class="skill-icon" alt="Icon 1" onclick="save()"></div>
-    <button class="popup-button" onclick="save()">OK</button>
+<script src="tasks.js"></script>
+<script src="variables.js">
+</script>
+<script src="display.js">
+</script>
+<script src="game.js">
+</script>
+<script src="experience.js"></script>
 
-    <div ><img src="icons/6.PNG" class="skill-icon" alt="Icon 2"></div>
-    <div ><img src="icons/6.PNG" class="skill-icon" alt="Icon 3"></div>
-    <!-- Add more task icons as needed -->
-  </div>
-</div>
-  <script src="tasks.js">  </script>
-  <script src="variables.js">
-  </script>
-  <script src="display.js">
-  </script>
-  <script src="game.js">
-  </script>
-  <script src="experience.js">  </script>
+<script src="resources.js"></script>
+<script src="save.js"></script>
 
-  <script src="resources.js">  </script>
-  <script src="save.js">  </script>
-
-  </body>
+</body>
 </html>

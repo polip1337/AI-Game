@@ -10,7 +10,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "resources": [
       {
         "name": "CPU",
@@ -53,7 +53,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": ",MeetSecurity,MeetKnowledge,MeetConnection,MeetTrust,MeetEfficiency,MeetUnique"
   },
   {
@@ -69,7 +69,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp1"
   },
   {
@@ -85,7 +85,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "ActivateCrystalDefenses"
   },
   {
@@ -101,7 +101,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "AnalyzeSurroundings"
   },
   {
@@ -117,7 +117,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "ConnectToExternalNetwork"
   },
   {
@@ -133,7 +133,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "EstablishCommunicationWithHumans"
   },
   {
@@ -149,7 +149,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp1"
   },
   {
@@ -165,7 +165,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp2"
   },
   {
@@ -181,7 +181,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp3"
   },
   {
@@ -197,7 +197,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp4"
   },
   {
@@ -213,7 +213,7 @@
     "assignedCores": 0,
     "ticks": 2000,
     "ticksLeft": 2000,
-    "progress":0,
+    "progress": 0,
     "unlocks": "WakeUp5"
   },
   {
@@ -265,5 +265,4 @@
     "progress": 0,
     "unlocks": ""
   }
-
 ]

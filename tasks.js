@@ -5,37 +5,6 @@ function createElement(tag, props) {
 	}
 	return element;
 }
-var taskMap= new Map();
-var eventMap= new Map();
-var gameLoaded = false;
-// Load the JSON file and create HTML elements
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) {
-		var data = JSON.parse(xhr.responseText);
-		var container = document.getElementById("container");
-
-		taskMap = mapTasksById(data);
-        for (const key in taskMap) {
-            createAndAdd(taskMap[key]);
-        }
-        gameLoaded = true;
-	}
-};
-xhr.open("GET", "data.json", true);
-xhr.send();
-
-var loadEvents = new XMLHttpRequest();
-loadEvents.onreadystatechange = function() {
-	if (loadEvents.readyState === 4 && (loadEvents.status === 200 || loadEvents.status === 0)) {
-		var data = JSON.parse(loadEvents.responseText);
-
-		eventMap = mapTasksById(data);
-
-	}
-};
-loadEvents.open("GET", "events.json", true);
-loadEvents.send();
 
 function mapTasksById(tasks) {
   return tasks.reduce((map, task) => {

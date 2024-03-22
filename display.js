@@ -33,3 +33,8 @@ function closePopup() {
 function destroyElement(name ) {
   document.getElementById(name).remove();
 }
+function createAllTasks(){
+    for (const key in taskMap) {
+        createAndAdd(taskMap[key]);
+    }
+}

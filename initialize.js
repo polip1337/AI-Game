@@ -1,5 +1,6 @@
-$( document ).ready(function() {
     var gameLoaded = false;
+
+$( document ).ready(function() {
     if(localStorage.getItem('eventMap')!= null && localStorage.getItem('taskMap')!= null){
         load();
         createAllTasks();

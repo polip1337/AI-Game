@@ -5,6 +5,8 @@ function save(){
   localStorage.setItem('skills', JSON.stringify(skills));
   localStorage.setItem('eventMap', JSON.stringify(eventMap));
   localStorage.setItem('taskMap', JSON.stringify(taskMap));
+  alert("Manually saved.");
+
 }
 function load() {
   cores = JSON.parse(localStorage.getItem('cores'));

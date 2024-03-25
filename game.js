@@ -35,7 +35,7 @@ function finishTask(key){
     document.getElementById(taskMap[key].id).style.width = `0%`;
     calcResources(taskMap[key]);
     if (taskMap[key].single) {
-        unlockElements(task.unlocks);
+        unlockElements(taskMap[key].unlocks);
         unAssignAllCores(key);
         hideElement(taskElement, true);
         if(taskMap[key].event != ""){

@@ -21,7 +21,6 @@ function updateProgressBar() {
     for (const key in taskMap) {
         const element = document.getElementById(taskMap[key].id);
         const progressElement = document.getElementById(`${taskMap[key].id}Progress`);
-        const taskElement = document.getElementById(`${taskMap[key].id}Cores`).parentElement.parentElement.parentElement;
         if (!element.classList.contains("blocked")) {
             if (taskMap[key].ticksLeft > 0) {
                 progressElement.style.width = `${taskMap[key].progress}%`;
@@ -33,6 +32,8 @@ function updateProgressBar() {
 }
 function finishTask(key){
     document.getElementById(taskMap[key].id).style.width = `0%`;
+    const taskElement = document.getElementById(`${taskMap[key].id}Cores`).parentElement.parentElement.parentElement;
+
     calcResources(taskMap[key]);
     if (taskMap[key].single) {
         unlockElements(taskMap[key].unlocks);

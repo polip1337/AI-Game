@@ -6,13 +6,14 @@ cores = {
   upgradeCores: 0,
 };
 
-resourcesMain = [
-  { name: 'Power', value: 0, unlocked:true },
-  { name: 'Data Points', value: 0, unlocked:true },
-  { name: 'Memory', value: 0, unlocked:false },
-  { name: 'Battery', unlocked:false },
-  { name: 'Botnet', unlocked:false },
-];
+resourcesMain = new Map();
+
+resourcesMain.set("Power",{ name: 'Power', value: 0, hidden:false });
+resourcesMain.set("Data Points",{ name: 'Data Points', value: 0, hidden:false });
+resourcesMain.set("Memory",{ name: 'Memory', value: 0, hidden:true });
+resourcesMain.set("Battery",{ name: 'Battery', value: 0, hidden:true });
+resourcesMain.set("Botnet",{ name: 'Botnet', value: 0, hidden:true });
+
 
 skills = [
   { name: 'Unity', experience: 0, level: 1, experienceToLevel: 1000, progress:0},

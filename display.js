@@ -49,6 +49,11 @@ function unlockElements(ids) {
     if (element) {
 		hideElement (element,false);
     }
-    taskMap[id].hidden=false;
+    if(taskMap[id]!= null){
+        taskMap[id].hidden=false;
+    }
+    if(resourcesMain.get(id) != null){
+        resourcesMain.get(id).hidden=false;
+    }
   });
 }

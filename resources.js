@@ -48,6 +48,6 @@ function createResourceElement(name, value) {
   container.appendChild(resourceElem);
 }
 resourcesMain.forEach(resource => {
-    if(resource.unlocked)
-    createResourceElement(resource.name, resource.value);
+    if(!resource.hidden)
+        createResourceElement(resource.name, resource.value);
 });

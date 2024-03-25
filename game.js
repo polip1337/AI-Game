@@ -61,7 +61,7 @@ if(gameLoaded){
 
 function calcResources(task) {
     task.resources.forEach(function (resource) {
-        const tempRes = resourcesMain.find(resourceM => resourceM.name === resource.name);
+        const tempRes = resourcesMain.get(resource.name);
         tempRes.value += resource.value;
         document.getElementById(resource.name).innerHTML = tempRes.value;
     });
@@ -108,7 +108,7 @@ function areResourcesAvailable(task) {
         const resourceCost = resource.value;
 
         // Check if the resource is available in the resource list
-        const availableResource = resourcesMain.find(res => res.name === resourceName);
+        const availableResource = resourcesMain.get(resource.name);
 
         // If the resource is not found or the available quantity is less than the required cost
         if (resource.type == "costBefore") {

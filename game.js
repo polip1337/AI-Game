@@ -16,8 +16,7 @@ if(gameLoaded){
 }, 1000);
 
 function updateFlowResources() {
-        for (const key in flowResourcesMain) {
-            resource = flowResourcesMain[key];
+        for (let [key,resource] of flowResourcesMain) {
             if(resource.value < resource.maxValue)
             {
                 resource.value += resource.regenPerSecond;

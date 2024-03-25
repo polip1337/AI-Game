@@ -1,3 +1,26 @@
+setInterval(() => {
+if(gameLoaded){
+
+    manageLocks()
+    updateAllTaskProgress();
+    updateFlowResources();
+    }
+
+}, 1);
+
+setInterval(() => {
+if(gameLoaded){
+    updateFlowResources();
+    }
+
+}, 1000);
+
+function updateFlowResources() {
+        for (const key in flowResourceMain) {
+            flowResourceMain[key].value+=flowResourceMain[key].regenPerSecond;
+        }
+}
+
 
 function updateTaskProgress(task) {
     const initialTicks = task.ticks;
@@ -8,20 +31,16 @@ function updateTaskProgress(task) {
     addExperience(task.skill, cores);
 }
 
-function updateAllTaskProgress() {
-    for (const key in taskMap) {
-        const element = document.getElementById(key);
-        if (taskMap[key].assignedCores > 0 && !element.classList.contains("hidden") && !element.classList.contains("blocked")) {
-            updateTaskProgress(taskMap[key]);
-        }
-    }
-}
 
-function updateProgressBar() {
+
+function updateAllTaskProgress() {
     for (const key in taskMap) {
         const element = document.getElementById(taskMap[key].id);
         const progressElement = document.getElementById(`${taskMap[key].id}Progress`);
-        if (!element.classList.contains("blocked")) {
+
+        if (taskMap[key].assignedCores > 0 && !element.classList.contains("hidden") && !element.classList.contains("blocked")) {
+            updateTaskProgress(taskMap[key]);
+
             if (taskMap[key].ticksLeft > 0) {
                 progressElement.style.width = `${taskMap[key].progress}%`;
             } else {
@@ -50,15 +69,7 @@ function finishTask(key){
         }
     }
 }
-setInterval(() => {
-if(gameLoaded){
 
-    manageLocks()
-    updateAllTaskProgress();
-    updateProgressBar();
-    }
-
-}, 1);
 
 function calcResources(task) {
     task.resources.forEach(function (resource) {

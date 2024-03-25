@@ -10,7 +10,6 @@ $( document ).ready(function() {
     createAllTasks();
     manageLocks();
     updateAllTaskProgress();
-    updateProgressBar();
     createResourceElements()
     updateExpBars()
     gameLoaded = true;

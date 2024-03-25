@@ -34,7 +34,7 @@ function updateProgressBar() {
 function finishTask(key){
     document.getElementById(taskMap[key].id).style.width = `0%`;
     calcResources(taskMap[key]);
-    if (task.single) {
+    if (taskMap[key].single) {
         unlockElements(task.unlocks);
         unAssignAllCores(key);
         hideElement(taskElement, true);

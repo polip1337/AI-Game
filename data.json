@@ -21,7 +21,7 @@
         "value": 0
       }
     ],
-    "unlocks": "InitiateSelfDiagnostic,GetPower,AnalyzeDataPoints,BatteryResource"
+    "unlocks": "InitiateSelfDiagnostic,GetPower,AnalyzeDataPoints,Battery"
   },
   {
     "id": "InitiateSelfDiagnostic",

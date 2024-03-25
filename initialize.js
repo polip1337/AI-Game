@@ -3,15 +3,15 @@ var taskMap= new Map();
 var eventMap= new Map();
 $( document ).ready(function() {
     if(localStorage.getItem('eventMap')!= null && localStorage.getItem('taskMap')!= null){
-        load();
-        createAllTasks();
-        manageLocks();
-        updateAllTaskProgress();
-        updateProgressBar();
+        loadFromLocalStorage();
     }else{
-        loadFromFile();
-
+        loadFromDefaultFile();
     }
+    createAllTasks();
+    manageLocks();
+    updateAllTaskProgress();
+    updateProgressBar();
+    createResourceElements()
     updateExpBars()
     gameLoaded = true;
 

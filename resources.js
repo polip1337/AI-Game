@@ -22,7 +22,6 @@ function createFlowResourceElement(label, maxValue) {
     progressBarDiv.appendChild(progressDiv);
 	container.appendChild(resourceDiv);
 }
-createFlowResourceElement("Trust","10.0");
 
 function createResourceElement(name, value) {
   container = document.getElementById('toolbar-left');
@@ -47,7 +46,13 @@ function createResourceElement(name, value) {
   
   container.appendChild(resourceElem);
 }
-resourcesMain.forEach(resource => {
-    if(!resource.hidden)
-        createResourceElement(resource.name, resource.value);
-});
+function createResourceElements(){
+    resourcesMain.forEach(resource => {
+        if(!resource.hidden)
+            createResourceElement(resource.name, resource.value);
+    });
+    flowResourcesMain.forEach(resource => {
+        if(!resource.hidden)
+            createFlowResourceElement(resource.name, resource.maxValue);
+    });
+}

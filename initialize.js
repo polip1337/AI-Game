@@ -18,7 +18,7 @@ $( document ).ready(function() {
 });
 
 
-function loadFromFile(){
+function loadFromDefaultFile(){
 
     // Load the JSON file and create HTML elements
     var xhr = new XMLHttpRequest();

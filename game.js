@@ -16,11 +16,11 @@ if(gameLoaded){
 }, 1000);
 
 function updateFlowResources() {
-        for (const key in flowResourceMain) {
-            if(flowResourceMain[key].value < flowResourceMain[key].maxValue)
-                flowResourceMain[key].value+=flowResourceMain[key].regenPerSecond;
-            if(flowResourceMain[key].value > flowResourceMain[key].maxValue)
-                flowResourceMain[key].value = flowResourceMain[key].maxValue;
+        for (const key in flowResourcesMain) {
+            if(flowResourcesMain[key].value < flowResourcesMain[key].maxValue)
+                flowResourcesMain[key].value+=flowResourcesMain[key].regenPerSecond;
+            if(flowResourcesMain[key].value > flowResourcesMain[key].maxValue)
+                flowResourcesMain[key].value = flowResourcesMain[key].maxValue;
         }
 }
 

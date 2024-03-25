@@ -10,6 +10,7 @@ $( document ).ready(function() {
         updateProgressBar();
     }else{
         loadFromFile();
+
     }
     updateExpBars()
     gameLoaded = true;

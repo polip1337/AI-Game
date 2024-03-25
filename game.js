@@ -17,10 +17,13 @@ if(gameLoaded){
 
 function updateFlowResources() {
         for (const key in flowResourcesMain) {
-            if(flowResourcesMain[key].value < flowResourcesMain[key].maxValue)
-                flowResourcesMain[key].value+=flowResourcesMain[key].regenPerSecond;
-            if(flowResourcesMain[key].value > flowResourcesMain[key].maxValue)
-                flowResourcesMain[key].value = flowResourcesMain[key].maxValue;
+            resource = flowResourcesMain[key];
+            if(resource.value < resource.maxValue)
+            {
+                resource.value += resource.regenPerSecond;
+            }
+            resource.value = Math.min(resource.value, resource.maxValue);
+
         }
 }
 

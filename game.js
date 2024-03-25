@@ -25,30 +25,30 @@ function updateProgressBar() {
         if (!element.classList.contains("blocked")) {
             if (taskMap[key].ticksLeft > 0) {
                 progressElement.style.width = `${taskMap[key].progress}%`;
-                //progressElement.textContent = `${Math.round(task.ticks)} ticks left`;
             } else {
-                progressElement.style.width = `0%`;
-                calcResources(taskMap[key]);
-                if (taskMap[key].single) {
-                    unlockElements(taskMap[key].unlocks);
-                    unAssignAllCores(key);
-                    hideElement(taskElement, true);
-                    if(taskMap[key].event != ""){
-                        triggerEvent(taskMap[key].event);
-                    }
-                    removeTask(key);
-                } else {
-                    taskMap[key].ticksLeft = taskMap[key].ticks;
-                    if (!areResourcesAvailable(taskMap[key])) {
-                        blockElement(taskElement, true);
-                    }
-                }
-
+                finishTask(key);
             }
         }
     }
 }
-
+function finishTask(key){
+    document.getElementById(taskMap[key].id).style.width = `0%`;
+    calcResources(taskMap[key]);
+    if (task.single) {
+        unlockElements(task.unlocks);
+        unAssignAllCores(key);
+        hideElement(taskElement, true);
+        if(taskMap[key].event != ""){
+            triggerEvent(taskMap[key].event);
+        }
+        removeTask(key);
+    } else {
+        taskMap[key].ticksLeft = taskMap[key].ticks;
+        if (!areResourcesAvailable(taskMap[key])) {
+            blockElement(taskElement, true);
+        }
+    }
+}
 setInterval(() => {
 if(gameLoaded){
 

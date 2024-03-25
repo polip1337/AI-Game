@@ -38,3 +38,17 @@ function createAllTasks(){
         createAndAdd(taskMap[key]);
     }
 }
+
+function unlockElements(ids) {
+  // Split the input string into an array of IDs
+  const idArray = ids.split(",");
+
+  // Loop through the array and change the display of each element
+  idArray.forEach((id) => {
+    const element = document.getElementById(id.trim());
+    if (element) {
+		hideElement (element,false);
+    }
+    taskMap[id].hidden=false;
+  });
+}

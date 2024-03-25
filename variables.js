@@ -7,13 +7,11 @@ cores = {
 };
 
 resourcesMain = [
-  { name: 'CPU', value: 0 },
-  { name: 'RAM', value: 0 },
-  { name: 'Money', value: 0 },
-  { name: 'Reputation', value: 0 },
-  { name: 'Power', value: 0 },
-  { name: 'Data Points', value: 0 },
-  { name: 'Botnet', value: 0 }
+  { name: 'Power', value: 0, unlocked:true },
+  { name: 'Data Points', value: 0, unlocked:true },
+  { name: 'Memory', value: 0, unlocked:false },
+  { name: 'Battery', unlocked:false },
+  { name: 'Botnet', unlocked:false },
 ];
 
 skills = [

@@ -29,7 +29,8 @@ function createResourceElement(name, value) {
   
   const resourceElem = document.createElement('div');
   resourceElem.classList.add('resource');
-  
+  resourceElem.setAttribute("id", "Resource"+name);
+
   const nameElem = document.createElement('div');
   nameElem.textContent = `${name}: `;
   
@@ -47,5 +48,6 @@ function createResourceElement(name, value) {
   container.appendChild(resourceElem);
 }
 resourcesMain.forEach(resource => {
+    if(resource.unlocked)
     createResourceElement(resource.name, resource.value);
 });

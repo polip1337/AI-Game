@@ -13,14 +13,6 @@
     "progress": 0,
     "resources": [
       {
-        "name": "CPU",
-        "value": 0
-      },
-      {
-        "name": "RAM",
-        "value": 0
-      },
-      {
         "name": "Power",
         "value": 0
       },
@@ -29,7 +21,7 @@
         "value": 0
       }
     ],
-    "unlocks": "InitiateSelfDiagnostic,GetPower,AnalyzeDataPoints"
+    "unlocks": "InitiateSelfDiagnostic,GetPower,AnalyzeDataPoints,BatteryResource"
   },
   {
     "id": "InitiateSelfDiagnostic",

@@ -49,9 +49,9 @@ function createResourceElement(name, value, hidden) {
 }
 function createResourceElements(){
     resourcesMain.forEach(resource => {
-        createResourceElement(resource.name, resource.value);
+        createResourceElement(resource.name, resource.value, resource.hidden);
     });
     flowResourcesMain.forEach(resource => {
-        createFlowResourceElement(resource.name, resource.maxValue);
+        createFlowResourceElement(resource.name, resource.maxValue, resource.hidden);
     });
 }

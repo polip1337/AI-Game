@@ -1,5 +1,5 @@
 
-function createFlowResourceElement(label, maxValue) {
+function createFlowResourceElement(label, maxValue, hidden) {
     container = document.getElementById('right-toolbar');
     const resourceDiv = document.createElement('div');
     resourceDiv.classList.add('resource-right');
@@ -18,12 +18,13 @@ function createFlowResourceElement(label, maxValue) {
 	progressDiv.innerHTML = "0.0/"+maxValue;
 
     progressDiv.style.width = `0%`;
-	
+    hideElement(resourceDiv,hidden);
+
     progressBarDiv.appendChild(progressDiv);
 	container.appendChild(resourceDiv);
 }
 
-function createResourceElement(name, value) {
+function createResourceElement(name, value, hidden) {
   container = document.getElementById('toolbar-left');
   
   const resourceElem = document.createElement('div');
@@ -43,16 +44,14 @@ function createResourceElement(name, value) {
   valueElem.appendChild(valueSpan);
   resourceElem.appendChild(nameElem);
   resourceElem.appendChild(valueElem);
-  
+  hideElement(resourceElem,hidden);
   container.appendChild(resourceElem);
 }
 function createResourceElements(){
     resourcesMain.forEach(resource => {
-        if(!resource.hidden)
-            createResourceElement(resource.name, resource.value);
+        createResourceElement(resource.name, resource.value);
     });
     flowResourcesMain.forEach(resource => {
-        if(!resource.hidden)
-            createFlowResourceElement(resource.name, resource.maxValue);
+        createFlowResourceElement(resource.name, resource.maxValue);
     });
 }

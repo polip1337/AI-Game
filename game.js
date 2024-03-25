@@ -17,7 +17,10 @@ if(gameLoaded){
 
 function updateFlowResources() {
         for (const key in flowResourceMain) {
-            flowResourceMain[key].value+=flowResourceMain[key].regenPerSecond;
+            if(flowResourceMain[key].value < flowResourceMain[key].maxValue)
+                flowResourceMain[key].value+=flowResourceMain[key].regenPerSecond;
+            if(flowResourceMain[key].value > flowResourceMain[key].maxValue)
+                flowResourceMain[key].value = flowResourceMain[key].maxValue;
         }
 }
 
